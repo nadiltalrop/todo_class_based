@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-9 mt-5">
+            <div class="card mb-3 shadow">
+                <div class="card-body">
+                    <h5 class="card-title">{{task.name}}</h5>
+                    <p class="">{{task.priority}}</p>
+                    <p>{{task.date}}</p>
+                    <a class="btn btn-primary" href="{% url 'todo:cvupdate' task.id %}">Edit</a>
+                    <a class="btn btn-danger" href="{% url 'todo:cvdelete' task.id %}">Delete</a>
+                </div>   
+            </div> 
+        </div>
+    </div>
+</div>
+
+{% endblock %}
